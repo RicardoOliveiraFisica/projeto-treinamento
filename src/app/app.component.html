@@ -1,2 +1,13 @@
 <treinamento-header [nome] = "nomePai"></treinamento-header>
+
+<form>
+  <div class="mb-3">
+    <label for="nome" class="form-label">Digite seu nome:</label>
+    <!-- <input type="text" class="form-control" id="nomePai" name="nomePai" [(ngModel)]="nomePai"> -->
+    <select id="nomePai" name="nomePai" [(ngModel)]="nomePai">
+      <option *ngFor="let nome of nomes" value="{{ nome }}">{{ nome }}</option>
+    </select>
+    <button [disabled]="buttonDisabled()">ok</button>
+  </div>
+</form>
 <router-outlet></router-outlet>

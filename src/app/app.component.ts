@@ -8,4 +8,14 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'projeto-treinamento';
   nomePai = "Ricardo";
+  nomes: string[] = ["Ana",
+                      "João",
+                      "Maria",
+                      "Pedro",
+                      "Ativo"
+                    ];
+
+  buttonDisabled(): boolean {
+    return this.nomePai !== "Ativo";
+  }
 }
